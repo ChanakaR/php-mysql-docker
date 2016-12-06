@@ -1,5 +1,8 @@
 sudo: required
 language: php
+php:
+  - 5.5
+  - hhvm
 
 services:
   - docker
@@ -8,3 +11,5 @@ before_install:
   - docker build -t chanakar/apache-server .
   - docker run -d chanakar/apache-server
   - docker ps
+
+script: phpunit Test.php
