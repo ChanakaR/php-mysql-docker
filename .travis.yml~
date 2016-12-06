@@ -8,4 +8,4 @@ before_install:
   - docker run --name apache-server -d chanakar/apache-server
   - docker ps
 
-script: docker ps | 
+script: docker ps | grep -q apache-server
