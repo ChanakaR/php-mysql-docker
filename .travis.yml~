@@ -12,4 +12,5 @@ before_install:
   - docker build -t chanakar/apache-server .
   - docker run -d chanakar/apache-server
   - docker ps
+
 script: phpunit Test.php
